@@ -8,7 +8,7 @@ export function ContextPrincipalProvider(props) {
   const [donador, setDonador] = useState([]);
 
   useEffect(() => {
-    fetch('http://190.104.182.155:3000/api/donadores')
+    fetch(URI_DONA)
       .then((res) => res.json())
       .then((data) => setDonador(data));
   }, []);
