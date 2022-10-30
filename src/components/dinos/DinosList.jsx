@@ -6,7 +6,9 @@ import CardDinos from "./CardDinos";
 function DinosList({ SteamId }) {
   const URI_DIN = import.meta.env.VITE_URI_DINOS;
 
-  let urlFinal = `${URI_DIN}${SteamId}`;
+  // let urlFinal = `${URI_DIN}/${SteamId}`;
+  let urlFinal = `http://190.104.182.155:3000/api/dinos/${SteamId}`;
+  
   const [dinos, setDinos] = useState([]);
 
   useEffect(() => {
